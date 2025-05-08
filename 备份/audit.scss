@@ -1,0 +1,64 @@
+.audit-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+        padding: 10px;
+        background: #fff;
+
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+
+            .nut-button {
+                flex: 1;
+            }
+        }
+    }
+
+    .content {
+        flex: 1;
+        overflow-y: auto;
+
+        .nut-cell {
+            .actions {
+                display: flex;
+                justify-content: flex-end;
+                gap: 8px;
+                margin-top: 8px;
+            }
+        }
+    }
+
+    .reject-modal {
+        padding: 20px;
+
+        .modal-title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .modal-content {
+            margin: 15px 0;
+
+            text {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+
+        .modal-actions {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+    }
+}
