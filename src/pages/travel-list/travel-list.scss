@@ -1,0 +1,84 @@
+.travel-container {
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .title {
+      font-size: 24px; // 增大标题字体大小
+      font-weight: bold;
+    }
+  }
+
+  .empty-tip {
+    text-align: center;
+    padding: 50px 0;
+    color: #999;
+    font-size: 18px; // 增大空状态提示字体大小
+  }
+
+  .travel-list {
+    .travel-item {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 15px;
+      display: flex;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+      .cover {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+      }
+
+      .content {
+        flex: 1;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+
+        .title-line {
+          display: flex;
+          align-items: center;
+          margin-bottom: 5px;
+
+          .title {
+            font-size: 18px; // 增大游记标题字体大小
+            font-weight: bold;
+            margin-right: 10px;
+            flex: 1;
+          }
+        }
+
+        .time {
+          font-size: 14px; // 增大时间字体大小
+          color: #999;
+          margin-bottom: 5px;
+        }
+
+        .reject-reason {
+          font-size: 14px; // 增大拒绝原因字体大小
+          color: #f56c6c;
+          margin: 5px 0;
+        }
+
+        .actions {
+          margin-top: auto;
+          display: flex;
+          justify-content: flex-end;
+          gap: 10px;
+
+          button {
+            font-size: 14px; // 增大按钮字体大小
+          }
+        }
+      }
+    }
+  }
+}
