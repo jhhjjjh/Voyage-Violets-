@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+
+
+// 当屏幕宽度大于等于 768px 时
+@media (min-width: 768px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+// 当屏幕宽度大于等于 1200px 时
+@media (min-width: 1200px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+
+
+.login {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 如果需要垂直居中 */
+    width: 100%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    /* 确保容器有宽度 */
+    //height: 100vh;
+}
+
+
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    //margin-top: 10vh;
+}
+
+.login-content {
+    width: 20vw;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+}
+
+.login-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: blue;
+}

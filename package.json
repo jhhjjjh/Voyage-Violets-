@@ -44,6 +44,7 @@
   "dependencies": {
     "@ant-design/icons": "^6.0.0",
     "@babel/runtime": "^7.24.4",
+    "@nutui/icons-react": "^3.0.1",
     "@nutui/nutui-react": "^3.0.10",
     "@nutui/nutui-react-taro": "^3.0.10",
     "@nutui/nutui-taro": "4.3.13",
@@ -67,7 +68,11 @@
     "antd": "^5.25.0",
     "axios": "^1.9.0",
     "react": "^18.3.1",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.6.0",
+    "redux": "^5.0.1",
+    "redux-thunk": "^3.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.24.4",
@@ -87,7 +92,7 @@
     "eslint-plugin-react-hooks": "^4.4.0",
     "postcss": "^8.4.38",
     "react-refresh": "^0.14.0",
-    "sass": "^1.75.0",
+    "sass": "^1.87.0",
     "stylelint": "^16.4.0",
     "tsconfig-paths-webpack-plugin": "^4.1.0",
     "typescript": "^5.4.5",

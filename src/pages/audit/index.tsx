@@ -107,7 +107,15 @@ const AuditPage: React.FC = () => {
                 title: '成功',
                 content: '审核通过',
             });
-            fetchTravelNotes();
+            const updatedNotes = travelNotes.map(note =>
+                note.id === id
+                    ? {
+                        ...note,
+                        status: 'approved' as TravelNoteStatus
+                    }
+                    : note
+            )
+            setTravelNotes(updatedNotes)
         } catch (error) {
             Dialog.alert({
                 title: '错误',
@@ -117,13 +125,18 @@ const AuditPage: React.FC = () => {
         }
     };
 
-    const handleReject = (note: TravelNote): void => {
-        setCurrentNote(note);
+    const handleReject = (id: string): void => {
+        const targetNote = travelNotes.find(note => note.id === id);
+        if (!targetNote) return;
+
+        // 更新 currentNote（用于弹窗显示）
+        setCurrentNote(targetNote);
+        // 打开弹窗
         setRejectModalVisible(true);
     };
 
     const confirmReject = async (): Promise<void> => {
-        if (!rejectReason) {
+        if (!rejectReason || !currentNote) {
             Dialog.alert({
                 title: '提示',
                 content: '请填写拒绝原因',
@@ -132,13 +145,24 @@ const AuditPage: React.FC = () => {
         }
 
         try {
+            const updatedNotes = travelNotes.map(note =>
+                note.id === currentNote.id
+                    ? {
+                        ...note,
+                        status: "rejected" as TravelNoteStatus,
+                        rejectReason
+                    }
+                    : note
+            );
+
             Dialog.alert({
                 title: '成功',
                 content: '已拒绝该游记',
             });
+            setTravelNotes(updatedNotes);
             setRejectModalVisible(false);
             setRejectReason('');
-            fetchTravelNotes();
+            // fetchTravelNotes();
         } catch (error) {
             Dialog.alert({
                 title: '错误',
@@ -154,7 +178,9 @@ const AuditPage: React.FC = () => {
                 title: '成功',
                 content: '已删除该游记',
             });
-            fetchTravelNotes();
+            const updateNotes = travelNotes.filter(note => note.id !== id)
+            setTravelNotes(updateNotes);
+            //fetchTravelNotes();
         } catch (error) {
             Dialog.alert({
                 title: '错误',
@@ -246,7 +272,7 @@ const AuditPage: React.FC = () => {
                                     <Button
                                         type="warning"
                                         size="small"
-                                        onClick={() => handleReject(note)}
+                                        onClick={() => handleReject(note.id)}
                                         disabled={userRole !== 'auditor' || note.status !== 'pending'}
                                         style={{ marginLeft: '8px' }}
                                     >
