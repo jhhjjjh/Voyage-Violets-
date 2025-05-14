@@ -1,0 +1,87 @@
+.page {
+  padding: 20rpx;
+  background-color: #f9f9f9;
+}
+
+.search-bar {
+  margin-bottom: 30rpx;
+
+  input {
+    width: 100%;
+    padding: 20rpx;
+    background: #fff;
+    border-radius: 12rpx;
+    box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+  }
+}
+
+.search-bar {
+  margin-bottom: 20rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.card-img {
+  width: 100%;
+  display: block;
+  /* 不再设置固定高度，让 mode='widthFix' 生效 */
+}
+
+
+.masonry {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 16rpx;
+  overflow: hidden;
+  box-shadow: 0 6rpx 20rpx rgba(0, 0, 0, 0.06);
+  padding-bottom: 20rpx;
+}
+
+.card-img {
+  width: 100%;
+  display: block;
+  border-radius: 16rpx 16rpx 0 0;
+}
+
+.card-title {
+  font-size: 28rpx;
+  font-weight: bold;
+  padding: 20rpx;
+  color: #333;
+}
+
+.card-user {
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+  margin-top: -10rpx;
+
+  .avatar {
+    width: 48rpx;
+    height: 48rpx;
+    border-radius: 50%;
+    margin-right: 12rpx;
+  }
+
+  .nickname {
+    font-size: 24rpx;
+    color: #666;
+  }
+}
+
+.card-footer {
+  font-size: 24rpx;
+  color: #999;
+  padding: 10rpx 20rpx 0;
+}
