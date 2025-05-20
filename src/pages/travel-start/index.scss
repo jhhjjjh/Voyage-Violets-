@@ -1,96 +1,44 @@
-.travel-blog-container {
-  padding-bottom: 100px; // 留出底部空间
-}
-
-.custom-navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+.iconbar-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
   height: 44px;
-  background: #fff;
+  background-color: white;
+  }
+
+.iconbar-inner {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 0 12px;
-  z-index: 99;
-  border-bottom: 1px solid #eee;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.back-button {
-  position: absolute;
-  left: 12px;
-  font-size: 24px;
+.iconbar-left,
+.iconbar-right {
+  width: 80rpx;
+  text-align: center;
+}
+
+.iconbar-icon {
+  font-size: 36rpx;
+}
+
+.iconbar-title {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  font-size: 32rpx;
   color: #333;
+}
+
+.iconbar-share-btn {
   background: transparent;
   border: none;
-}
-
-.navbar-title {
-  font-size: 18px;
-  font-weight: bold;
-  color: #000;
-}
-
-.media-demo {
-  width: 100%;
-  height: 200px;
-  margin-top: 44px; // 避开导航栏
-}
-
-.location-info {
-  padding: 12px;
-  font-size: 16px;
-  color: #666;
-}
-
-.travel-details {
-  padding: 0 12px;
-  font-size: 14px;
-  color: #444;
-}
-
-.blog-content {
-  padding: 12px;
-  line-height: 1.7;
-  font-size: 15px;
-  color: #333;
-}
-
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 16px 12px 24px;
-  background: #fff;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
-  z-index: 100;
-}
-
-.comment-area {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.comment-input {
-  flex: 1;
-  height: 44px;
-  padding: 0 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  font-size: 16px;
-}
-
-.send-btn {
-  height: 44px;
-  line-height: 44px;
-  padding: 0 16px;
-  background: #0081ff;
-  color: #fff;
-  border-radius: 8px;
-  font-size: 16px;
-  border: none;
+  font-size: 36rpx;
+  line-height: normal;
+  padding: 0;
 }
